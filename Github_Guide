@@ -1,0 +1,57 @@
+Using GitHub Guide
+
+-- Work In Progress --
+-- robertej@mit.edu --
+-- 1.18.18 --
+
+Conents:
+- Repository Creation
+- Adding Files to Repository
+
+
+Setup steps:
+
+-- Install git if not installed
+-- Set up user information:
+$ git config --global user.email "robertej@mit.edu"
+$ git config --global user.name "robertej"
+
+
+Create Repo from command line:
+
+$ sudo apt-get install curl
+$ curl -u <github username> https://api.github.com/user/repos -d '{ "name": "<repository name>" }'
+
+NOTE I have not been able to get this to work with MIT's github account (github.mit.edu). When running the above command, we find the following error message:
+curl: (51) SSL: certificate subject name (github.mit.edu) does not match target host name 'api.github.mit.edu'
+
+To create a repo manually, log into your github.mit.edu account, click on "New Repository" button (green, middle right of webpage). Name repository, choose public or private, click "Create Repository" at bottom of webpage. 
+
+Add files to repository from command line:
+
+$ cd <Directory you want to add to repo>
+$ git init
+$ git add .
+$ git commit -m "first commit" #-m is message; optional
+$ git remote add origin https://github.mit.edu/robertej/wavedump #this only has to be run once
+$ git remote -v #verification 
+$ git pull origin master
+$ git push origin master
+$ git status #checks differences between repository and working directory files
+
+
+https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
+
+other helpful commands:
+
+git remote rm origin
+rm -rf .git #removes git tracking on project
+$ git clone https://github.mit.edu/robertej/wavedump
+
+git checkout -b branch_2
+
+git push origin branch_2 
+
+
+
+

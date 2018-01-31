@@ -1,0 +1,8 @@
+gdb root.exe
+run
+.L WaveFit.C++g
+<CTRL/C>
+set break point - ie "b WaveFit"
+c
+fitfunc()
+WaveFit(10,0)

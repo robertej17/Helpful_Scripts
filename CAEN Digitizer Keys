@@ -1,0 +1,41 @@
+Running wavedump instructions:
+
+$ cd wavedump-3
+$ wavedump Setup/myWaveDump
+
+export PATH=$PATH:/home/bobby/wdump
+
+$$$$$$$$ 
+To install CAENUSB, do the following:
+
+go into CAENUSBdrivB.c, comment out "signal_pending" function, make, make install
+
+
+$$$$$$
+Installing GNUPlot:
+http://www.gnuplot.info/download.html
+./configure
+make
+sudo make install
+
+
+                            Bindkey help                                
+--------------------------------------------------------------------------
+  [q]   Quit
+  [R]   Reload configuration file and restart
+  [s]   Start/Stop acquisition
+  [t]   Send a software trigger (single shot)
+  [T]   Enable/Disable continuous software trigger
+  [w]   Write one event to output file
+  [W]   Enable/Disable continuous writing to output file
+  [p]   Plot one event
+  [P]   Enable/Disable continuous plot
+  [f]   Toggle between FFT and Waveform plot
+  [h]   Toggle between Histogram and Waveform plot
+  [g]   Change the index of the group to plot (XX740 family)
+  [m]   Single ADC temperature monitor (XX751/30/25 only)
+  [c]   ADC Calibration (XX751/30/25 only)
+ [0-7]  Enable/Disable one channel on the plot
+        For x740 family this is the plotted group's relative channel index
+[SPACE] This help
+
